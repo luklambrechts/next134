@@ -2,8 +2,11 @@
 
 import Link from "next/link";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { usePathname } from "next/navigation"
 
 export default function NavBar() {
+  const pathname = usePathname();
+  
   return (
     <Navbar
       bg="primary"
@@ -19,7 +22,7 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls="main-navbar"></Navbar.Toggle>
         <Navbar.Collapse id="main-navbar">
           <Nav>
-            <Nav.Link as={Link} href="/hello">Hello </Nav.Link>
+            <Nav.Link as={Link} href="/hello" active={pathname === "hello"}>Hello </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
