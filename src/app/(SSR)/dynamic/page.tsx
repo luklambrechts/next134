@@ -13,7 +13,10 @@ export default async function Page() {
     const fetchpath = `https://api.unsplash.com/photos/random?client_id=${process.env.UNSPLASH_ACCESS_KEY}`
     console.log("fetchpath")
     console.log(fetchpath);
-    const response = await fetch(fetchpath)
+    const response = await fetch(fetchpath, { 
+        // cache: "no-cache" 
+        // next: { revalidate: 0 } 
+    })
     const image: UnsplashImage = await response.json()
 
     const width = Math.min(image.width, 500)
