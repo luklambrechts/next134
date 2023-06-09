@@ -1,5 +1,5 @@
 .image {
-    obj-fit: cover;
+    object-fit: cover;
     margin: 0.25rem;
     border-radius: 4px;
 }

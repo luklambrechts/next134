@@ -7,7 +7,7 @@ import NavBar from "./NavBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "NextJS 13.4 Image Gallery",
+  title: "NextJS 13.4 Image Gallery2",
   description: "Tutorial project by coding in flow",
 };
 
