@@ -1,3 +1,4 @@
+import { Alert } from "@/components/bootstrap";
 import { UnsplashUser } from "@/models/unsplash-user";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -19,6 +20,8 @@ export async function generateMetadata({ params: { username }}: PageProps): Prom
     }
 } 
 
+// const getUserCached = cache(getUser) Use cache if your are not using the fetch
+
 export default async function Page({ params: { username }}: PageProps) {
     const user = await getUser(username);
     // const fetchUrl = `https://api.unsplash.com/users/${username}?client_id=${process.env.UNSPLASH_ACCESS_KEY}`
@@ -29,6 +32,9 @@ export default async function Page({ params: { username }}: PageProps) {
     // const user: UnsplashUser = await response.json();
     return (
         <div>
+            <Alert>
+                This profile page uses <strong>generateMetadata</strong> to set the <strong>page title</strong> dynamically from the Api response
+            </Alert>
             <h1>{user.username}</h1>
             <p>First name: {user.first_name}</p>
             <p>Last name: {user.last_name}</p>
