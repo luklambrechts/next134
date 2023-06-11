@@ -1,4 +1,4 @@
-import { UnsplashImage } from "@/models/unsplash.image";
+import { UnsplashImage } from "@/models/unsplash_image";
 import Image from "next/image";
 import styles from "./TopicPage.module.css"
 import { Alert } from "@/components/bootstrap";

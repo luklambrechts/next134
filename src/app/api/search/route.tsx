@@ -1,4 +1,4 @@
-import { UnsplashImage, UnsplashSearchResponse } from "@/models/unsplash.image";
+import { UnsplashImage, UnsplashSearchResponse } from "@/models/unsplash_image";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
