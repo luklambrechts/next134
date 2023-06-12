@@ -40,9 +40,9 @@ export default function SearchPage() {
             <Button type="submit" className="mb-3">Search</Button>
         </Form>
         <div className="d-flex flex-column align-items-center">
-            (searchResultsloading && <Spinner animation="border" />
-            (searchResultsLoadingIsError && <div>Something went wrong. Please try again.</div>)
-            (searchResults?.length === 0 && <p>Nothing found. Try a different query!</p>
+            {searchResultsloading && <Spinner animation="border" />}
+            {searchResultsLoadingIsError && <div>Something went wrong. Please try again.</div>}
+            {searchResults?.length === 0 && <p>Nothing found. Try a different query!</p>}
         </div>
         
     </div>
